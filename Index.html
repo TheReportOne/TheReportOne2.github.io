@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamiento Web</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0078d7;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .layout {
+      flex: 1;
+      display: flex;
+      padding: 1rem;
+      gap: 1rem;
+    }
+
+    /* IZQUIERDA */
+    .sidebar {
+      width: 200px;
+      background: #005a9e;
+      padding: 1rem;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      height: fit-content;
+    }
+
+    .sidebar button {
+      background: white;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #005a9e;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .sidebar button:hover {
+      background: #004b87;
+      color: white;
+    }
+
+    /* DERECHA */
+    .content-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .content {
+      display: none;
+      max-width: 800px;
+      text-align: justify;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      line-height: 1.6;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    h2 {
+      text-align: center;
+      color: #005a9e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #0078d7;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+      .sidebar button {
+        flex: 1;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Posicionamiento Web</h1>
+  <p>Página educativa sobre el funcionamiento del posicionamiento web</p>
+</header>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <button onclick="mostrarContenido('seo')">SEO</button>
+    <button onclick="mostrarContenido('sem')">SEM</button>
+    <button onclick="mostrarContenido('visi')">Visibilidad en Resultados</button>
+	<button onclick="mostrarContenido('referencias')">Referencias</button>
+	  
+  </div>
+
+  <div class="content-container">
+
+    <div id="seo" class="content active">
+      <h2>SEO</h2><br>
+		<b><p>Definición y propósito</p></b>
+		<p>El SEO, o posicionamiento en buscadores, es un conjunto de estrategias y técnicas orientadas a optimizar un sitio web con el fin de mejorar su visibilidad en los resultados orgánicos de motores de búsqueda como Google. A través del SEO se busca que el sitio aparezca de forma natural, sin depender exclusivamente de publicidad pagada, y que atraiga tráfico cualificado de manera sostenible.</p>
+      <br>
+      <center><img src="https://cocktailmarketing.com.mx/wp-content/uploads/2021/07/posicionamiento-seo-que-es-y-para-que-sirve.jpg" width="400" height="250" alt="Qué es"></center>
+	  <br>
+	  <b><p>Tipos de SEO</p></b>
+	  <ul>
+		  <li>SEO técnico: Se ocupa de la estructura del sitio, la indexación, la velocidad de carga, la arquitectura web, el uso de etiquetas canónicas, sitemaps y archivos robots.txt para facilitar que los motores de búsqueda rastreen e indexen eficientemente la web.</li>
+		  <li>SEO on-page: Incluye la optimización del contenido visible para los usuarios: títulos, encabezados (H1, H2, …), meta descripciones, URLs amigables, densidad de palabras clave y experiencia de lectura.</li>
+		  <li>SEO off-page: Se refiere a las acciones externas al sitio, principalmente la construcción de enlaces (link building), menciones en otros medios, y señales de autoridad que mejoran la reputación del dominio. </li>	
+	  </ul><br>
+		<p><b>Beneficios</b></p>
+		<ul>
+		<li>Genera tráfico orgánico estable: Una vez que el sitio está bien posicionado, puede recibir visitas constantes sin pagar por cada clic.</li>
+		<li>Mejora la experiencia de usuario: Al optimizar velocidad, navegabilidad y estructura, no solo contentas a Google, sino también a tus visitantes. </li>
+		<li>Retorno de inversión (ROI) eficiente: Aunque requiere tiempo, a largo plazo es muy rentable, ya que no se paga por cada visita (como en la publicidad).</li>
+		</ul>
+	  <br>
+	  <p><b>Desafíos</b></p>
+		<ul>
+		<li>Los resultados no son inmediatos: El SEO es una estrategia a mediano o largo plazo, puede tomar meses ver mejoras significativas. </li>
+		<li>Necesita mantenimiento constante:Hay que actualizar contenido, monitorear cambios de algoritmo, optimizar técnicas y obtener nuevos enlaces. </li>
+	    <li>Requiere recursos: Aunque no pagas por clic, invertir en profesionales, herramientas SEO y creación de contenido de calidad tiene un costo.</li>
+		
+		
+		</ul>
+    </div>
+
+    <div id="sem" class="content">
+      <h2>SEM</h2><br>
+		<p><b>Qué es y cómo funciona</b></p>
+		<p>El SEM engloba todas las acciones de marketing pagado en motores de búsqueda. Se basa principalmente en campañas PPC (pago por clic) como las de Google Ads, donde los anunciantes pujan por palabras clave para que sus anuncios aparezcan en posiciones destacadas.</p>
+		<p>A diferencia del SEO, el SEM permite obtener visibilidad inmediata, ya que puedes crear anuncios y comenzar a recibir tráfico desde el primer momento.  </p><br>
+      <center><img src="https://inforges.es/wp-content/uploads/2022/03/seo-sem-busqueda-pagada-inforges.png" width="500" height="200" alt="Tipos"></center>
+	  <br>
+	  <p><b>Ventajas del SEM</b></p>
+	  <ul>
+	  <li>Control total del presupuesto: Puedes definir cuánto deseas gastar, cuándo mostrar tus anuncios y en qué dispositivos o ubicaciones.</li>
+      <li>Segmentación precisa: Permite apuntar por keywords específicas, intereses, ubicación, horario y tipo de dispositivo. </li>
+	  <li>Medición en tiempo real: El rendimiento (clics, impresiones, conversiones) se puede analizar inmediatamente, lo que facilita la optimización constante.</li>
+	  <li>Medición en tiempo real: el rendimiento (clics, impresiones, conversiones) se puede analizar inmediatamente, lo que facilita la optimización constante. </li>
+	  <li>Flexibilidad: puedes hacer pruebas A/B con diferentes textos, creatividades y páginas de destino para mejorar tu campaña.</li>
+     </ul><br>
+	<p><b>Limitaciones</b></p>
+    <ul>
+	<li>El coste puede subir rápidamente si las palabras clave son competitivas.</li>
+	<li>Una vez que dejas de invertir, la visibilidad desaparece: los anuncios se detienen cuando cortas el presupuesto.</li>
+    <li>Requiere optimización constante para mejorar el Quality Score (o nivel de calidad), la relevancia de anuncios y la experiencia en la página de destino.</li>		
+	</ul><br>
+    <p><b>Cuándo usar SEM</b></p>
+	<ul>
+	<li>Para lanzamientos de productos o promociones con fecha límite, donde necesitas resultados rápidos.</li>
+	<li>Para validar ideas de negocio: puedes probar qué mensajes convierten mejor sin esperar meses de SEO.</li>
+	<li>Para complementar una estrategia SEO: usar SEM para captar tráfico inmediato mientras el SEO madura y consolida autoridad.  </li>
+	</ul>
+	
+    </div>
+
+    <div id="visi" class="content">
+      <h2>Visualidad en resultados </h2><br>
+      <p><b>Qué es la visualidad en los resultados</b></p>
+	  <p>La visualidad en los resultados se refiere al modo en que los motores de búsqueda muestran información más allá del tradicional “10 enlaces azules”: fragmentos enriquecidos (rich snippets), paneles de conocimiento (knowledge panels), carruseles de imágenes y vídeos, preguntas frecuentes (People Also Ask), y otros elementos visuales que captan la atención del usuario.</p>
+	  <p>Esta evolución hace que la página de resultados (SERP) sea más interactiva y visual, lo cual impacta directamente en cómo los usuarios hacen clic y consumen la información.</p>
+      <br>
+      <center><img src="https://impulso06.com/wp-content/uploads/2024/01/posicionamiento-web-Como-saber-si-tu-web-esta-bien-posicionada.png" width="650" height="400" alt="Funcionamiento"></center><br>
+	  <p><b>Tipos de elementos visuales en la SERP</b></p>
+	  <ul>
+      <li>Featured Snippets: respuestas breves extraídas directamente de una web, que aparecen en la parte superior y ofrecen una respuesta rápida al usuario.</li>
+	  <li>Knowledge Panels: paneles informativos con datos estructurados sobre personas, organizaciones o conceptos.</li>
+	  <li>Carruseles de imágenes o vídeos: permiten mostrar contenido multimedia directamente en los resultados.</li>
+	  <li>Sección “People Also Ask” (PAA): un bloque interactivo con preguntas relacionadas y sus respuestas.</li>
+	  <li>Resultados enriquecidos (rich results): que pueden incluir reseñas, calificaciones, precios, recetas, FAQs, etc., gracias a los datos estructurados.</li>	
+		</ul><br>
+	<p><b>Importancia para la visibilidad</b></p>
+	<ul>
+	<li>Estos elementos visuales pueden incrementar el CTR (Click-Through Rate) orgánico, aunque no garantizan tráfico porque a veces la respuesta es suficiente sin hacer clic.</li>
+	<li>Aparecer en rich snippets o paneles de conocimiento posiciona a tu contenido como una fuente de autoridad, lo que puede mejorar la percepción de marca.</li>	
+	<li>Gracias a los datos estructurados, puedes hacer que Google “entienda” mejor tu contenido y lo muestre de forma más atractiva.</li>	
+	</ul><br>
+	<p><b>Cómo optimizar para la visualidad</b></p>
+	<ol>
+	<li>Implementar datos estructurados (Schema.org/JSON-LD) en tu sitio para contenido como artículos, productos, FAQs, reseñas, eventos, etc.</li>
+	<li>Optimizar imágenes y vídeos: usar nombres de archivos descriptivos, atributos alt adecuados, crear sitemaps de imágenes y vídeos, y asegurarse de que estos medios carguen rápido.</li>
+	<li>Crear contenido en forma de pregunta: estructurar tu contenido con preguntas y respuestas (por ejemplo, usando encabezados H2, H3) para tener más posibilidades en “People Also Ask” o fragmentos destacados.</li>
+	<li>Optimizar para búsquedas locales: si tienes un negocio físico, asegúrate de que tu ficha de negocio (Google Business Profile) está bien optimizada, con imágenes, reseñas y datos de contacto precisos para aparecer en el “Local Pack”.</li>	
+	</ol>
+    </div>
+<div id="referencias" class="content">
+      <h2>Referencias</h2><br>
+	  <p>A continuación se presentan las fuentes consultadas para respaldar la información sobre SEO, SEM y la visualidad en los resultados de búsqueda. Estas referencias incluyen artículos especializados, análisis académicos y recursos técnicos que aportan fundamentos actualizados y confiables para comprender el funcionamiento del posicionamiento web y las estrategias relacionadas.</p><br>
+	  <ul>
+	  <li>Agencia WebSEO. (2025). <i>Posicionamiento SEO y SEM: diferencias y cómo aplicarlas. Agencia WebSEO.</i> https://agenciawebseo.com/posicionamiento-seo-y-sem-diferencias-y-como-aplicarlas/</li>
+	  <li>GoDaddy. (2025). <i>SEO y SEM: diferencias y mejor estrategia para tu negocio. GoDaddy.</i> https://www.godaddy.com/resources/latam/marketing/diferencias-generales-entre-seo-y-sem/ </li>
+	  <li>Marketing Directo. (2024). <i>Diferencias entre SEO y SEM: 5 factores clave. Marketing Directo.</i>https://www.marketingdirecto.com/imprescindibles/seo/diferencias-seo-sem-5-factores-clave</li>
+	  <li>Universidad Politécnica Salesiana. (2025). <i>Marketing digital en el siglo XXI: posicionamiento SEO y SEM.</i>https://dspace.ups.edu.ec/bitstream/123456789/6316/1/UPS-GT000550.pdf </li>
+	  <li>Fubel, E., Groll, N. M., Gundlach, P., Han, Q., Kaiser, M. (2023). <i>Beyond Rankings: Exploring the Impact of SERP Features on Organic Click-through Rates.</i>https://doi.org/10.48550/arXiv.2306.01785</li>
+	  <li>Oliveira, B., Lopes, C. T. (2023). <i>The Evolution of Web Search User Interfaces: An Archaeological Analysis of Google Search Engine Result Pages.</i> https://doi.org/10.48550/arXiv.2301.08613</li>  
+	  </ul><br>
+	</div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Posicionamiento Web | André Guizar Santiago</p>
+</footer>
+
+<script>
+  function mostrarContenido(id) {
+    const contenidos = document.querySelectorAll('.content');
+    contenidos.forEach(c => c.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
