@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The 1975 Notes</title>
   <meta name="description" content="Artículo sobre la eliminación de la canción 'Human Too' de streaming por Matty Healy y rumores sobre nuevo álbum.">
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHB2M491MR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NHB2M491MR');
+</script>
   <style>
     :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#7dd3fc;--glass: rgba(255,255,255,0.03)}
     *{box-sizing:border-box}
